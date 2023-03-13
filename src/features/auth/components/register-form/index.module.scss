@@ -1,0 +1,84 @@
+@import '~/assets/styles';
+
+.register-form {
+  min-height: inherit;
+  padding: 8rem 2rem;
+  border-radius: $rounded-2;
+  background-color: $color-theme;
+
+  @include responsive(md) {
+    margin: 10rem auto 5rem;
+    padding: 4.5rem;
+    min-height: unset;
+    width: 45rem;
+    background-color: rgba($color-theme, 0.9);
+  }
+}
+
+.title {
+  @include fontStyle(3rem, bold);
+}
+
+.form {
+  margin-top: 3rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid #555;
+
+  @include responsive(md) {
+    margin-top: 5rem;
+  }
+}
+
+.submit {
+  @include boxSize(100%, 4.5rem);
+
+  margin-top: 3rem;
+  border: none;
+  border-radius: $rounded-5;
+  background-color: $color-primary;
+  transition: all $duration-100;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-primary-active;
+  }
+}
+
+.require {
+  margin-top: 3rem;
+  color: $color-text;
+
+  &__title {
+    font-size: 1.5rem;
+  }
+
+  &__list {
+    list-style-type: disc;
+    margin-left: 2.5rem;
+  }
+
+  &__item {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: italic;
+
+    &--active {
+      color: #fff;
+    }
+  }
+}
+
+.txt {
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 1.5rem;
+
+  &__link {
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
