@@ -1,0 +1,53 @@
+@import '~/assets/styles';
+
+.footer {
+  border-top: 1rem solid $color-border;
+  padding: 5rem 2rem 3rem;
+  color: $color-text;
+  background-color: $color-theme;
+
+  @include responsive(sm) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.text-hover {
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.contact {
+  font-size: 1.5rem;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(1, fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+
+  @include responsive(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include responsive(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  @include responsive(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include responsive(xl) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.copyright {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
