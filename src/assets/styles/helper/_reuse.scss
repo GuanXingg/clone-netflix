@@ -1,0 +1,4 @@
+@mixin backgroundNetflix() {
+  background: linear-gradient(0deg, rgba(#000, 0.8), rgba(#000, 0.2), rgba(#000, 0.8)),
+    url('~/assets/images/netflix.jpg') center/cover no-repeat;
+}
