@@ -1,0 +1,17 @@
+.theme-public {
+  @include backgroundNetflix();
+  position: relative;
+  min-height: 70rem;
+
+  @include responsive(md) {
+    min-height: 75rem;
+  }
+
+  @include responsive(xl) {
+    min-height: 80rem;
+  }
+
+  @include responsive(mobile) {
+    min-height: 45rem;
+  }
+}
