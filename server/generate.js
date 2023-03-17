@@ -22,7 +22,7 @@ const generateUsers = (n) => {
     if (randNum > 5) {
       user.fullName = faker.name.fullName();
       user.gender = faker.name.sex();
-      user.phone = faker.phone.number('+84 09# #### ###');
+      user.phone = faker.phone.number('+84 9# #### ###');
     }
 
     userList.push(user);

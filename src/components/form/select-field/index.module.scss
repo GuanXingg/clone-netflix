@@ -1,0 +1,76 @@
+@import '~/assets/styles';
+
+.field {
+  &--sm {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &--md {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &--lg {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.content {
+  position: relative;
+  height: 5rem;
+}
+
+.select {
+  @include boxSize(100%, inherit);
+
+  padding: 2rem 1.5rem 0.2rem;
+  border: none;
+  border-radius: $rounded-5;
+  background-color: $color-input;
+  transition: $duration-100;
+
+  &:focus {
+    background-color: $color-input-active;
+    border-radius: $rounded-5 $rounded-5 0 0;
+  }
+}
+
+.label {
+  @include posElement(absolute, 50%, 1.5rem);
+
+  color: $color-text;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: $duration-100;
+}
+
+.select:focus ~ .label,
+.select--checked ~ .label {
+  top: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.list {
+  @include posElement(absolute, 100%, 0, 0, null, 10);
+  border-radius: 0 0 $rounded-5 $rounded-5;
+  overflow: hidden;
+  background-color: $color-input;
+
+  &__item {
+    padding: 1.5rem;
+    height: 4.5rem;
+    transition: $duration-100;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-input-active;
+    }
+  }
+}
+
+.error {
+  @include fontStyle(null, null, $color-primary, italic);
+  margin-top: 0.5rem;
+}

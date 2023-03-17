@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { AxiosResponse, AxiosError } from 'axios';
 import authApi from './authApi';
-import { AuthErrorState, AuthResponseState, SubmitValues } from './interface';
+import { AuthErrorState, AuthResponseState, SubmitValues, UserInfoProps } from './interface';
 
 interface AuthState {
   loading: boolean;
@@ -38,6 +38,14 @@ export const authAsyncRegister = createAsyncThunk(
     }
   }
 );
+
+// export const authAsyncUpdateInfo = createAsyncThunk(
+//   'auth/updateInfo',
+//   async (data: UserInfoProps, { fulfillWithValue, rejectWithValue }) => {
+//     const res: AxiosResponse = await authApi.updateInfo(data);
+
+//   }
+// );
 
 export const authSlice = createSlice({
   name: 'auth',

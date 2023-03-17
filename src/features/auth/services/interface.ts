@@ -20,3 +20,19 @@ export interface AuthErrorState {
   message: string;
   data: any;
 }
+
+// ====================
+export interface NewInfoValues {
+  fullName: string;
+  gender: string;
+  phone: string;
+}
+
+// ====================
+export interface UserInfoProps {
+  email?: string;
+  password?: string;
+  fullName?: string;
+  gender?: string;
+  phone?: string;
+}
