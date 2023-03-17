@@ -1,0 +1,18 @@
+@import '~/assets/styles';
+
+.error {
+  color: #f00;
+}
+
+.title {
+  @include fontStyle(1.5rem, bold);
+}
+
+.message {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.name {
+  font-weight: bold;
+}
