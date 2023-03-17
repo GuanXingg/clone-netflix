@@ -15,3 +15,8 @@
     min-height: 45rem;
   }
 }
+
+.theme-public-hidden {
+  @extend .theme-public;
+  overflow: hidden;
+}

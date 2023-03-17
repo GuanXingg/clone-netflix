@@ -1,0 +1,57 @@
+@import '~/assets/styles';
+
+.field {
+  &--sm {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &--md {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &--lg {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.content {
+  position: relative;
+  height: 5rem;
+}
+
+.input {
+  @include boxSize(100%, inherit);
+
+  padding: 2rem 1.5rem 0.2rem;
+  border: none;
+  border-radius: $rounded-5;
+  background-color: $color-input;
+  transition: $duration-100;
+
+  &:focus {
+    background-color: $color-input-active;
+  }
+}
+
+.label {
+  @include posElement(absolute, 50%, 1.5rem);
+
+  color: $color-text;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: $duration-100;
+}
+
+.input:focus ~ .label,
+.input:not(:placeholder-shown) ~ .label {
+  top: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.error {
+  @include fontStyle(null, null, $color-primary, italic);
+  margin-top: 0.5rem;
+}

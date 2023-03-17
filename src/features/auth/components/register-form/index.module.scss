@@ -1,0 +1,79 @@
+@import '~/assets/styles';
+
+.register-form {
+  min-height: inherit;
+  background-color: $color-theme;
+  padding: 8rem 2rem;
+
+  @include responsive(md) {
+    margin: 10rem auto 5rem;
+    padding: 4.5rem;
+    width: 45rem;
+    min-height: unset;
+    background-color: rgba($color-theme, 0.9);
+  }
+}
+
+.title {
+  @include fontStyle(3rem, bold);
+}
+
+.form {
+  margin-top: 3rem;
+  padding-bottom: 5rem;
+  border-bottom: thin solid #555;
+}
+
+.require {
+  margin-top: 3rem;
+  color: $color-text;
+
+  &__title {
+    font-size: $text-15;
+  }
+
+  &__list {
+    margin-left: 2.5rem;
+    list-style-type: disc;
+  }
+
+  &__item {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: italic;
+
+    &--checked {
+      color: #fff;
+    }
+  }
+}
+
+.submit {
+  @include boxSize(100%, 4.5rem);
+
+  margin-top: 3rem;
+  border: none;
+  border-radius: $rounded-5;
+  background-color: $color-primary;
+  transition: $duration-100;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-primary-active;
+  }
+}
+
+.txt {
+  margin-top: 5rem;
+  font-size: $text-15;
+  text-align: center;
+
+  &__link {
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
