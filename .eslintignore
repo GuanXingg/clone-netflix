@@ -4,3 +4,5 @@ dist/
 .eslintrc
 env.d.ts
 vite-env.d.ts
+main.js
+generate.js
