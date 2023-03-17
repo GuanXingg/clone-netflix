@@ -29,17 +29,19 @@
   width: $size;
 }
 
-@mixin posElement($pos, $top: null, $left: null, $right: null, $bottom: null) {
+@mixin posElement($pos, $top: null, $left: null, $right: null, $bottom: null, $zIndex: null) {
   position: $pos;
   top: $top;
   left: $left;
   right: $right;
   bottom: $bottom;
+  z-index: $zIndex;
 }
 
-@mixin posInsetElement($pos, $top, $right: null, $bottom: null, $left: null) {
+@mixin posInsetElement($pos, $top, $right: null, $bottom: null, $left: null, $zIndex: null) {
   position: $pos;
   inset: $top $right $bottom $left;
+  z-index: $zIndex;
 }
 
 @mixin fontStyle($size: null, $weight: null, $color: null, $italic: null, $lineHeight: null) {

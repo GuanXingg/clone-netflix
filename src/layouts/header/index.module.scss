@@ -1,0 +1,107 @@
+@import '~/assets/styles';
+
+// ----- Header -----
+.header {
+  @include posElement(fixed, 0, 0, 0, null, 10);
+  transition: 300ms;
+
+  &--scroll {
+    background: $color-theme;
+  }
+}
+
+.row {
+  @include flexBox(null, space-between, center);
+  height: 6rem;
+
+  @include responsive(md) {
+    height: 8rem;
+  }
+}
+
+// ----- Left Nav -----
+.left {
+  @include flexCenter(ver);
+}
+
+.bars {
+  margin-right: 0.5rem;
+  border: none;
+  background: transparent;
+
+  @include responsive(md) {
+    display: none;
+  }
+}
+
+// ----- Right Nav -----
+.right {
+  display: none;
+
+  @include responsive(md) {
+    display: flex;
+  }
+}
+
+.auth {
+  @include flexCenter(center);
+
+  border-radius: $rounded-2;
+  padding: 1rem;
+  width: 8rem;
+  text-decoration: none;
+  transition: $duration-75;
+
+  &--register {
+    background-color: $color-primary;
+
+    &:hover {
+      background-color: $color-primary-active;
+    }
+  }
+}
+
+// ----- Mobile -----
+.overlay {
+  @include posInsetElement(fixed, 0, null, null, null, 20);
+  background-color: rgba(#000, 0.2);
+}
+
+.mobile {
+  @include posElement(fixed, 0, 0, null, 0, 30);
+
+  padding: 1.5rem;
+  width: 25rem;
+  background-color: $color-theme-active;
+  transition: $duration-250;
+  transform: translateX(-100%);
+
+  &--active {
+    transform: translateX(0);
+  }
+
+  &__logo {
+    @include flexCenter(center);
+    margin-top: 2.5rem;
+  }
+
+  &__auth {
+    margin-top: 3rem;
+  }
+
+  &__link {
+    @include flexCenter(center);
+    padding: 1.2rem;
+    border-radius: $rounded-2;
+    text-decoration: none;
+
+    &--login {
+      background: $color-theme;
+    }
+
+    &--register {
+      margin-top: 1.5rem;
+      background-color: $color-primary;
+    }
+  }
+}
